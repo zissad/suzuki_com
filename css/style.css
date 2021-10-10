@@ -1,0 +1,200 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* global style  */
+:root
+{
+    /* color  */
+    --black: #2f2f2f;
+    --white: #fff;
+    --primaryColor: #e50013;
+
+    /* font  */
+    --headingFont: 'Ubuntu', sans-serif;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(#1c1c1c,#323232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main::before {
+    content: 'Adventure';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 16vw;
+    font-weight: 700;
+    color: rgba(255,255,255,0.05);
+}
+/* nav style  */
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px;
+    align-items: center;
+}
+nav a .logo {
+    color: var(--white);
+    width: 150px;
+}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--white);
+    margin-left: 40px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover {
+    color: var(--primaryColor);
+}
+nav ul li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 25px;
+    width: 0%;
+    height: 3px;
+    border-radius: 50px;
+    background: var(--primaryColor);
+    left: 50%;
+    transition: all 0.4s ease;
+}
+nav ul li a:hover::after {
+    right: 0;
+    width: 100%;
+    left: 0;
+}
+
+/* hero section  */
+
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    margin-top: 100px;
+}
+.hero-section img {
+    max-width: 50%;
+    margin-top: 0px;
+    transform: rotateX(20deg);
+    transition: all 0.3s ease;
+}
+.hero-section h2 {
+    font-family: var(--headingFont);
+    font-size: 4em;
+    font-weight: 300;
+    color: var(--white);
+}
+.hero-section h2 span {
+    font-weight:600;
+}
+.hero-section .btn {
+    display: inline-block;
+    background-color: var(--primaryColor);
+    color: var(--white);
+    text-decoration: none;
+    padding: 16px 36px;
+    margin-top: 20px;
+    border-radius: 60px;
+    font-size: 1.25em;
+    transition: all 0.3s ease;
+}
+.hero-section .btn:hover {
+    letter-spacing: 4px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+}
+.footer ul {
+    display: flex;
+}
+.footer ul li {
+    list-style: none;
+}
+.footer ul li a {
+    color: var(--white);
+    font-size: 2em;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+.footer ul li a:hover {
+    color: var(--primaryColor);
+}
+.footer .dots {
+    display: flex;
+}
+.footer .dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+    margin-left: 10px;
+    position: relative;
+    transition: 0.3s;
+    z-index: 3;
+}
+.footer .dots .dot:hover {
+    background: var(--white);
+}
+.slider .slids {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+.slider .slids h2 {
+    color: var(--white);
+    font-size: 3em;
+    font-weight: 600;
+}
+.slider .slids h2:last-child {
+    text-align: end;
+}
+.slider .slids h2 #fr_el,
+.slider .slids h2 #fr_el1 {
+    color: var(--primaryColor);
+    font-size: 0.7em;
+    font-weight: 400;
+    font-style: italic;
+}
